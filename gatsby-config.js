@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Ready Recipes`,
+    description: `Recipes to help people cook simple and delicious meals with less stress and more joy.`,
+    author: `Mo`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,6 +29,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `http://ready-recipes.local/graphql`,
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Poppins\:100, 200, 300, 400, 500, 600, 700`],
+        display: `swap`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
