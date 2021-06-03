@@ -1,12 +1,12 @@
 import * as React from "react"
-
-import Seo from "../components/seo"
+import Seo from "../components/SEO/SEO"
+import Layout from "../components/Layout/Layout"
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <Seo title="Home" />
-    <h1>Ready Recipes</h1>
-  </div>
+    <h1>This is the homepage.</h1>
+  </Layout>
 )
 
 export default IndexPage
