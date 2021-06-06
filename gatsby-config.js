@@ -39,7 +39,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Poppins\:100, 200, 300, 400, 500, 600, 700`],
+        fonts: [
+          `Poppins\:100, 200, 300, 400, 500, 600, 700`,
+          `Karla\:100, 200, 300, 400, 500, 600, 700`,
+          `Baskervville`,
+        ],
         display: `swap`,
       },
     },
