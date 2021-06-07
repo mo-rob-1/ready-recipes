@@ -1,12 +1,15 @@
 import styled, { createGlobalStyle } from "styled-components"
 
 export const Container = styled.main`
-  margin: 0 auto;
-  max-width: 1300px;
-  font-family: "Poppins", sans-serif;
+  /* margin: 0 auto;
+  max-width: 1300px; */
+  font-family: "Baskervville", serif;
 `
 
 export const GlobalStyles = createGlobalStyle`
+* {
+    box-sizing: border-box;
+}
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
