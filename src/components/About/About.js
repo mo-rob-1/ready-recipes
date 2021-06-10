@@ -1,6 +1,6 @@
 import React from "react"
-import { useImageQuery } from "../../hooks/useImageQuery"
-import Img from "gatsby-image"
+import { useIntroQuery } from "../../hooks/useIntroQuery"
+import { getImage } from "gatsby-plugin-image"
 import {
   AboutSection,
   AboutTitle,
@@ -8,30 +8,33 @@ import {
   AboutLink,
   AboutTextWrapper,
   AboutImageWrapper,
+  StyledImg,
 } from "./About.styles"
 
 const About = () => {
-  const data = useImageQuery()
+  const data = useIntroQuery()
   console.log(data)
+
+  const introImage = getImage(
+    data.allWpPage.edges[0].node.introduction.introImage.localFile
+      .childImageSharp.gatsbyImageData
+  )
 
   return (
     <AboutSection>
       <AboutTextWrapper>
-        <AboutTitle>Home to all our easy to make recipes.</AboutTitle>
+        <AboutTitle>
+          {data.allWpPage.edges[0].node.introduction.introTitle}
+        </AboutTitle>
         <AboutDescription>
-          Aravida cum sociis natoque penatibus et, magnis dis parturient montes
-          nascetur ridiculus mus mauris vitae ultricies. Leo integer malesuada
-          nunc vel risus commodo, viverra maecenas accumsan lacus vel facilisis
-          volutpat est velit egestas dui id ornare. Arcu odio ut sem nulla
-          pharetra diam sit amet nisl suscipit adipiscing bibendum est.
+          {data.allWpPage.edges[0].node.introduction.introDescription}
         </AboutDescription>
-        <AboutLink to="/">Learn more</AboutLink>
+        <AboutLink to={data.allWpPage.edges[0].node.introduction.introLink}>
+          Learn more
+        </AboutLink>
       </AboutTextWrapper>
       <AboutImageWrapper>
-        <Img
-          fluid={data.cookingImage.childImageSharp.fluid}
-          alt="Image of food being prepared"
-        />
+        <StyledImg image={introImage} alt="Intro Image" />
       </AboutImageWrapper>
     </AboutSection>
   )
