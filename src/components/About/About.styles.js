@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Link from "gatsby-link"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const AboutSection = styled.section`
   text-align: center;
@@ -22,6 +23,7 @@ export const AboutLink = styled(Link)`
   border: solid 1px #000;
   padding: 0.8rem 3rem;
   border-radius: 2rem;
+  color: #000;
 `
 
 export const AboutTextWrapper = styled.div`
@@ -30,4 +32,7 @@ export const AboutTextWrapper = styled.div`
 export const AboutImageWrapper = styled.div`
   display: block;
   margin-bottom: 3rem;
+`
+export const StyledImg = styled(GatsbyImage)`
+  width: 100%;
 `
