@@ -1,32 +1,56 @@
 import React from "react"
-import { Link, graphql } from "gatsby" //highlight-line
+import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
+import {
+  Img,
+  Banner,
+  BannerTitle,
+  Section,
+  RecipeTitle,
+  Excerpt,
+  StyledLink,
+  ViewRecipe,
+  RecipeItem,
+} from "../styles/Recipes.styles"
 
 export default function Home({ data }) {
   return (
     <Layout>
-      <h1>Recipes</h1>
-      {data.allWpRecipe.nodes.map(node => (
-        <div key={node.slug}>
-          {/* highlight-start */}
-          <Link to={node.slug}>
-            <p>{node.title}</p>
-          </Link>
-          {/* highlight-end */}
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-        </div>
-      ))}
+      <Banner>
+        <BannerTitle>Recipes</BannerTitle>
+      </Banner>
+      <Section>
+        {data.allWpRecipe.nodes.map(node => (
+          <RecipeItem key={node.slug}>
+            {/* highlight-start */}
+            <StyledLink to={node.slug}>
+              <Img src={node.featuredImage.node.localFile.url} />
+              <RecipeTitle>{node.title}</RecipeTitle>
+            </StyledLink>
+            {/* highlight-end */}
+            <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <ViewRecipe to={node.slug}>View Recipe</ViewRecipe>
+          </RecipeItem>
+        ))}
+      </Section>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query {
-    allWpRecipe(sort: { fields: [date] }) {
+    allWpRecipe(sort: { fields: date }) {
       nodes {
         title
         excerpt
         slug
+        featuredImage {
+          node {
+            localFile {
+              url
+            }
+          }
+        }
       }
     }
   }
