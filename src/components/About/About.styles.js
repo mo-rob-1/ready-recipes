@@ -9,6 +9,7 @@ export const AboutSection = styled.section`
 export const AboutTitle = styled.h1`
   margin-top: 0;
   line-height: 1.4;
+  font-weight: lighter;
 `
 export const AboutDescription = styled.p`
   font-family: "Karla", sans-serif;
