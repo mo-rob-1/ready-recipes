@@ -1,13 +1,15 @@
 import React from "react"
-import { Wrapper } from "./Footer.styles"
+import { Wrapper, Text, StyledLink } from "./Footer.styles"
 
 const Footer = () => {
   return (
     <Wrapper>
-      <small>
-        © 2021 | Ready Recipes - Website built by Mo. using GatsbyJS and
-        WordPress
-      </small>
+      <Text>
+        © 2021 | Ready Recipes - Website built by{" "}
+        <StyledLink to="https://mocodes.co.uk/">Mo.</StyledLink> using{" "}
+        <StyledLink to="https://www.gatsbyjs.com/">GatsbyJS{"  "}</StyledLink>
+        and <StyledLink to="https://wordpress.org/">WordPress</StyledLink>
+      </Text>
     </Wrapper>
   )
 }
