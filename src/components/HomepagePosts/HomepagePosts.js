@@ -30,6 +30,7 @@ const HomepagePosts = () => {
               /> */}
                 <Img src={node.featuredImage.node.localFile.url} />
                 <PostTitle>{node.title}</PostTitle>
+                <p>{node.date}</p>
                 <Excerpt
                   dangerouslySetInnerHTML={{
                     __html: node.excerpt,
