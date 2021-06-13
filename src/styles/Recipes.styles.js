@@ -26,12 +26,13 @@ export const BannerTitle = styled.h1`
   font-size: 3rem;
 `
 export const Section = styled.section`
-  padding: 5rem 1rem 0rem 1rem;
+  padding: 2rem 1rem 0rem 1rem;
 `
 
 export const RecipeTitle = styled.h2`
   font-weight: lighter;
   color: #000;
+  line-height: 1.5;
 `
 export const Excerpt = styled.p`
   line-height: 1.6;
@@ -54,4 +55,13 @@ export const ViewRecipe = styled(Link)`
 `
 export const RecipeItem = styled.div`
   margin-bottom: 3rem;
+`
+export const BreadcrumbLink = styled(Link)`
+  font-family: "Karla", sans-serif;
+  color: #000;
+`
+export const Breadcrumb = styled.h4`
+  font-family: "Karla", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 2rem;
 `

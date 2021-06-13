@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import img from "../images/Blog-page-banner-image.jpg"
+import Link from "gatsby-link"
 
 export const Section = styled.section`
-  padding: 5rem 1rem 0rem 1rem;
+  padding: 2rem 1rem 0rem 1rem;
 `
 export const Img = styled.img`
   width: 100%;
@@ -29,4 +30,37 @@ export const BannerTitle = styled.h1`
 export const BlogTitle = styled.h2`
   font-weight: lighter;
   color: #000;
+  line-height: 1.5;
+`
+
+export const Excerpt = styled.p`
+  line-height: 1.6;
+  font-family: "Karla", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+`
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`
+export const ViewPost = styled(Link)`
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  border: solid 1px #000;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 2rem;
+  color: #000;
+`
+
+export const BlogItem = styled.div`
+  margin-bottom: 3rem;
+`
+export const BreadcrumbLink = styled(Link)`
+  font-family: "Karla", sans-serif;
+  color: #000;
+`
+export const Breadcrumb = styled.h4`
+  font-family: "Karla", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 2rem;
 `
