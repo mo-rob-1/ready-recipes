@@ -11,6 +11,8 @@ import {
   StyledLink,
   ViewRecipe,
   RecipeItem,
+  Breadcrumb,
+  BreadcrumbLink,
 } from "../styles/Recipes.styles"
 
 export default function Home({ data }) {
@@ -20,6 +22,9 @@ export default function Home({ data }) {
         <BannerTitle>Recipes</BannerTitle>
       </Banner>
       <Section>
+        <Breadcrumb>
+          <BreadcrumbLink to="/">Home</BreadcrumbLink> / Recipes
+        </Breadcrumb>
         {data.allWpRecipe.nodes.map(node => (
           <RecipeItem key={node.slug}>
             {/* highlight-start */}

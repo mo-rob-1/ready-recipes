@@ -1,12 +1,18 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import {
   Section,
   Img,
   Banner,
+  BlogItem,
   BannerTitle,
   BlogTitle,
+  Excerpt,
+  StyledLink,
+  ViewPost,
+  Breadcrumb,
+  BreadcrumbLink,
 } from "../styles/Blog.styles"
 
 export default function Home({ data }) {
@@ -16,16 +22,21 @@ export default function Home({ data }) {
         <BannerTitle>Blog</BannerTitle>
       </Banner>
       <Section>
+        <Breadcrumb>
+          <BreadcrumbLink to="/">Home</BreadcrumbLink> / Blog
+        </Breadcrumb>
         {data.allWpPost.nodes.map(node => (
-          <div key={node.slug}>
+          <BlogItem key={node.slug}>
             {/* highlight-start */}
-            <Link to={node.slug}>
+            <StyledLink to={node.slug}>
               <Img src={node.featuredImage.node.localFile.url} />
               <BlogTitle>{node.title}</BlogTitle>
-            </Link>
+              <p>{node.date}</p>
+            </StyledLink>
             {/* highlight-end */}
-            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          </div>
+            <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <ViewPost to={node.slug}>View Post</ViewPost>
+          </BlogItem>
         ))}
       </Section>
     </Layout>
@@ -39,6 +50,12 @@ export const pageQuery = graphql`
         title
         excerpt
         slug
+        date(formatString: "DD MMMM, YYYY")
+        author {
+          node {
+            name
+          }
+        }
         featuredImage {
           node {
             localFile {
