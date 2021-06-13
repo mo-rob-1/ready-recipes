@@ -184,6 +184,10 @@ template {
     display: none;
 }
 
+figure {
+    margin: 0;
+}
+
 [hidden] {
     display: none;
 }
