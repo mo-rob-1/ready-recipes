@@ -9,6 +9,12 @@ export const useHomepagePostsQuery = () => {
           excerpt
           uri
           slug
+          date(formatString: "DD MMMM, YYYY")
+          author {
+            node {
+              name
+            }
+          }
           featuredImage {
             node {
               localFile {
