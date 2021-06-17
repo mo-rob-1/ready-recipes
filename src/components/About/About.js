@@ -29,9 +29,11 @@ const About = () => {
         <AboutDescription>
           {data.allWpPage.edges[0].node.introduction.introDescription}
         </AboutDescription>
-        <AboutLink to={data.allWpPage.edges[0].node.introduction.introLink}>
-          Learn more
-        </AboutLink>
+        <div>
+          <AboutLink to={data.allWpPage.edges[0].node.introduction.introLink}>
+            Learn more
+          </AboutLink>
+        </div>
       </AboutTextWrapper>
       <AboutImageWrapper>
         <StyledImg image={introImage} alt="Intro Image" />

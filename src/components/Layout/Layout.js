@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <HamburgerIcon handleViewMenu={handleViewMenu} />
+      {/* <HamburgerIcon handleViewMenu={handleViewMenu} /> */}
       <Header />
       <Container>{children}</Container>
       <Footer />

@@ -1,33 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
+
+import { List, ListItem, StyledLink, NavWrapper } from "./Navigation.styles"
 
 const Navigation = ({ menu }) => {
   return (
-    <div>
-      <ul>
+    <NavWrapper>
+      <List>
         {menu.map(mainItem =>
           !mainItem.parentId ? (
-            <li key={mainItem.id}>
-              <Link to={mainItem.url} activeClassName="nav-active">
+            <ListItem key={mainItem.id}>
+              <StyledLink to={mainItem.url} activeClassName="nav-active">
                 {mainItem.label}
                 {mainItem.childItems.nodes.length !== 0 && <div>&#8964;</div>}
-              </Link>
+              </StyledLink>
               {mainItem.childItems.nodes.length !== 0 ? (
                 <ul>
                   {mainItem.childItems.nodes.map(childItem => (
                     <li key={childItem.id}>
-                      <Link to={childItem.url} activeClassName="nav-active">
+                      <StyledLink
+                        to={childItem.url}
+                        activeClassName="nav-active"
+                      >
                         {childItem.label}
-                      </Link>
+                      </StyledLink>
                     </li>
                   ))}
                 </ul>
               ) : null}
-            </li>
+            </ListItem>
           ) : null
         )}
-      </ul>
-    </div>
+      </List>
+    </NavWrapper>
   )
 }
 

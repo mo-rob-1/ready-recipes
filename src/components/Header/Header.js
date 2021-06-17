@@ -1,19 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Navigation from "../Navigation/Navigation"
 import { useMenuQuery } from "../../hooks/useMenuQuery"
+import { StyledLink, Name, HeaderWrapper } from "./Header.styles"
 
 const Header = () => {
   const { site, menu } = useMenuQuery()
 
   return (
-    <div>
-      <Link to="/">
-        <h1>{site.siteMetadata.title}</h1>
-      </Link>
+    <HeaderWrapper>
+      <Name>
+        <StyledLink to="/">{site.siteMetadata.title}</StyledLink>
+      </Name>
       <Navigation menu={menu.menuItems.nodes} />
-    </div>
+    </HeaderWrapper>
   )
 }
 

@@ -17,8 +17,8 @@ const HomepagePosts = () => {
   console.log(data)
   return (
     <Section>
+      <SectionTitle>Latest News</SectionTitle>
       <Container>
-        <SectionTitle>Latest News</SectionTitle>
         {data.allWpPost.nodes.map(node => {
           return (
             <PostItem>
