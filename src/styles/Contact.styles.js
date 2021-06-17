@@ -1,8 +1,24 @@
 import styled from "styled-components"
 
+export const Container = styled.div`
+  background-color: #f5eaea;
+`
 export const ContactWrapper = styled.div`
   padding: 3rem 1rem;
-  background-color: #f5eaea;
+  @media (min-width: 768px) {
+    padding: 8rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+  }
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding-right: 0;
+    padding-left: 0;
+    gap: 7rem;
+  }
 `
 export const ContactInfoWrapper = styled.div`
   display: block;
@@ -19,6 +35,9 @@ export const Desc = styled.div`
   font-family: "Karla", sans-serif;
   line-height: 1.5;
   font-size: 0.9rem;
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
 `
 export const AddressWrapper = styled.div`
   font-family: "Karla", sans-serif;

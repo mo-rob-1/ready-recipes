@@ -4,6 +4,15 @@ import Link from "gatsby-link"
 
 export const Section = styled.section`
   padding: 2rem 1rem 0rem 1rem;
+  @media (min-width: 768px) {
+    padding: 3rem 4rem;
+  }
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding-right: 0;
+    padding-left: 0;
+  }
 `
 export const Img = styled.img`
   width: 100%;
@@ -63,4 +72,19 @@ export const Breadcrumb = styled.h4`
   font-family: "Karla", sans-serif;
   line-height: 1.5;
   margin-bottom: 2rem;
+  @media (min-width: 768px) {
+    margin-bottom: 3rem;
+  }
+`
+export const Wrapper = styled.div`
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2.6rem;
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
 `
