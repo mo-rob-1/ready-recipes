@@ -13,6 +13,7 @@ import {
   RecipeItem,
   Breadcrumb,
   BreadcrumbLink,
+  Wrapper,
 } from "../styles/Recipes.styles"
 
 export default function Home({ data }) {
@@ -25,18 +26,20 @@ export default function Home({ data }) {
         <Breadcrumb>
           <BreadcrumbLink to="/">Home</BreadcrumbLink> / Recipes
         </Breadcrumb>
-        {data.allWpRecipe.nodes.map(node => (
-          <RecipeItem key={node.slug}>
-            {/* highlight-start */}
-            <StyledLink to={node.slug}>
-              <Img src={node.featuredImage.node.localFile.url} />
-              <RecipeTitle>{node.title}</RecipeTitle>
-            </StyledLink>
-            {/* highlight-end */}
-            <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            <ViewRecipe to={node.slug}>View Recipe</ViewRecipe>
-          </RecipeItem>
-        ))}
+        <Wrapper>
+          {data.allWpRecipe.nodes.map(node => (
+            <RecipeItem key={node.slug}>
+              {/* highlight-start */}
+              <StyledLink to={node.slug}>
+                <Img src={node.featuredImage.node.localFile.url} />
+                <RecipeTitle>{node.title}</RecipeTitle>
+              </StyledLink>
+              {/* highlight-end */}
+              <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <ViewRecipe to={node.slug}>View Recipe</ViewRecipe>
+            </RecipeItem>
+          ))}
+        </Wrapper>
       </Section>
     </Layout>
   )

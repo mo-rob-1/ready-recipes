@@ -13,6 +13,7 @@ import {
   ViewPost,
   Breadcrumb,
   BreadcrumbLink,
+  Wrapper,
 } from "../styles/Blog.styles"
 
 export default function Home({ data }) {
@@ -25,19 +26,21 @@ export default function Home({ data }) {
         <Breadcrumb>
           <BreadcrumbLink to="/">Home</BreadcrumbLink> / Blog
         </Breadcrumb>
-        {data.allWpPost.nodes.map(node => (
-          <BlogItem key={node.slug}>
-            {/* highlight-start */}
-            <StyledLink to={node.slug}>
-              <Img src={node.featuredImage.node.localFile.url} />
-              <BlogTitle>{node.title}</BlogTitle>
-              <p>{node.date}</p>
-            </StyledLink>
-            {/* highlight-end */}
-            <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            <ViewPost to={node.slug}>View Post</ViewPost>
-          </BlogItem>
-        ))}
+        <Wrapper>
+          {data.allWpPost.nodes.map(node => (
+            <BlogItem key={node.slug}>
+              {/* highlight-start */}
+              <StyledLink to={node.slug}>
+                <Img src={node.featuredImage.node.localFile.url} />
+                <BlogTitle>{node.title}</BlogTitle>
+                <p>{node.date}</p>
+              </StyledLink>
+              {/* highlight-end */}
+              <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <ViewPost to={node.slug}>View Post</ViewPost>
+            </BlogItem>
+          ))}
+        </Wrapper>
       </Section>
     </Layout>
   )

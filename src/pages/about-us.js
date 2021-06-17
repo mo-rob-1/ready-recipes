@@ -10,6 +10,7 @@ import {
   IntroTitle,
   IntroDesc,
   AboutContent,
+  Section,
 } from "../styles/About.styles"
 
 const About = () => {
@@ -21,20 +22,22 @@ const About = () => {
 
   return (
     <Layout>
-      <IntroWrapper>
-        <IntroImgWrapper>
-          <Img fluid={data.aboutusImage.childImageSharp.fluid} />
-        </IntroImgWrapper>
-        <IntroTextWrapper>
-          <IntroTitle>Welcome to Ready Recipes!</IntroTitle>
-          <IntroDesc>
-            Aiam quis enim lobortis scelerisque fermentum dui faucibus in ornare
-            quam viverra orci sagittis eu volutpat odio facilisis mauris sit
-            amet massa vitae tortor condimentum lacinia quis vel eros donec ac
-            odio tempor orci dapibus ultrices.
-          </IntroDesc>
-        </IntroTextWrapper>
-      </IntroWrapper>
+      <Section>
+        <IntroWrapper>
+          <IntroImgWrapper>
+            <Img fluid={data.aboutusImage.childImageSharp.fluid} />
+          </IntroImgWrapper>
+          <IntroTextWrapper>
+            <IntroTitle>Welcome to Ready Recipes!</IntroTitle>
+            <IntroDesc>
+              Aiam quis enim lobortis scelerisque fermentum dui faucibus in
+              ornare quam viverra orci sagittis eu volutpat odio facilisis
+              mauris sit amet massa vitae tortor condimentum lacinia quis vel
+              eros donec ac odio tempor orci dapibus ultrices.
+            </IntroDesc>
+          </IntroTextWrapper>
+        </IntroWrapper>
+      </Section>
       <AboutContent
         dangerouslySetInnerHTML={{
           __html: aboutContent.allWpPage.nodes[0].content,
