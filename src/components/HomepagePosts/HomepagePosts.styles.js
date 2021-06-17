@@ -6,12 +6,26 @@ export const Img = styled.img`
   /* margin-top: 3rem; */
 `
 export const Section = styled.section`
-  display: block;
+  padding: 4rem;
   background-color: #f5eaea;
+  @media (min-width: 1440px) {
+    padding: 6rem 4rem;
+    padding-bottom: 5rem;
+  }
 `
 
 export const Container = styled.div`
-  padding: 4rem 1rem;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
 `
 export const StyledLink = styled(Link)`
   text-decoration: none;
@@ -19,12 +33,20 @@ export const StyledLink = styled(Link)`
 `
 export const SectionTitle = styled.h1`
   font-weight: lighter;
+  margin-top: 0;
   margin-bottom: 2rem;
+  @media (min-width: 768px) {
+    text-align: center;
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 4.5rem;
+    font-size: 2.4rem;
+  }
 `
 
 export const PostTitle = styled.h2`
   line-height: 1.5;
-  font-weight: lighter;
+  font-weight: bold;
 `
 
 export const Excerpt = styled.p`

@@ -4,6 +4,14 @@ import Link from "gatsby-link"
 export const Section = styled.section`
   padding: 5rem 1rem;
   background-color: #f5eaea;
+  @media (min-width: 768px) {
+    padding: 4rem 4rem;
+    padding-bottom: 0;
+  }
+  @media (min-width: 1440px) {
+    padding: 6rem 4rem;
+    padding-bottom: 3rem;
+  }
 `
 
 export const Img = styled.img`
@@ -14,10 +22,14 @@ export const Title = styled.h1`
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: lighter;
+  @media (min-width: 1440px) {
+    margin-bottom: 4.5rem;
+    font-size: 2.4rem;
+  }
 `
 
 export const RecipeTitle = styled.h2`
-  font-weight: lighter;
+  font-weight: bold;
 `
 
 export const StyledLink = styled(Link)`
@@ -26,13 +38,26 @@ export const StyledLink = styled(Link)`
 `
 
 export const RecipeWrapper = styled.div`
-  display: block;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
 `
 
 export const RecipeItem = styled.div`
   margin-bottom: 3rem;
   &:nth-child(6) {
     margin-bottom: 0;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 2rem;
   }
 `
 export const Excerpt = styled.p`

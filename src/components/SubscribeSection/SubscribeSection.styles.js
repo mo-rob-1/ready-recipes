@@ -30,6 +30,11 @@ export const Description = styled.p`
   font-size: 0.9rem;
   text-align: left;
   margin-bottom: 2rem;
+  @media (min-width: 768px) {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 540px;
+  }
 `
 
 export const SubscribeBtn = styled(Link)`
@@ -40,4 +45,7 @@ export const SubscribeBtn = styled(Link)`
   font-size: 0.9rem;
   border-radius: 2rem;
   color: #fff;
+  @media (min-width: 768px) {
+    margin-top: 1.4rem;
+  }
 `
