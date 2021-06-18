@@ -22,6 +22,8 @@ import {
   Ingredients,
   Preparation,
   CookingWrapper,
+  Container,
+  MainContent,
 } from "../styles/RecipeTemplate.styles"
 import { faClock, faUser } from "@fortawesome/free-solid-svg-icons"
 
@@ -30,7 +32,7 @@ export default function RecipePost({ data }) {
   console.log(post)
   return (
     <Layout>
-      <div>
+      <Container>
         {/* <TitleBanner>
           <Title>{post.title}</Title>
         </TitleBanner> */}
@@ -69,26 +71,28 @@ export default function RecipePost({ data }) {
           </OverviewTextWrapper>
         </RecipeOverviewWrapper>
 
-        <Content dangerouslySetInnerHTML={{ __html: post.content }} />
+        <MainContent>
+          <Content dangerouslySetInnerHTML={{ __html: post.content }} />
 
-        <CookingWrapper>
-          <CookingTitleWrapper>
-            <CookingTitle>Ingredients</CookingTitle>
-          </CookingTitleWrapper>
-          <Ingredients
-            dangerouslySetInnerHTML={{ __html: post.ingredients.ingredients }}
-          />
-        </CookingWrapper>
+          <CookingWrapper>
+            <CookingTitleWrapper>
+              <CookingTitle>Ingredients</CookingTitle>
+            </CookingTitleWrapper>
+            <Ingredients
+              dangerouslySetInnerHTML={{ __html: post.ingredients.ingredients }}
+            />
+          </CookingWrapper>
 
-        <CookingWrapper>
-          <CookingTitleWrapper>
-            <CookingTitle>Preparation</CookingTitle>
-          </CookingTitleWrapper>
-          <Preparation
-            dangerouslySetInnerHTML={{ __html: post.ingredients.preparation }}
-          />
-        </CookingWrapper>
-      </div>
+          <CookingWrapper>
+            <CookingTitleWrapper>
+              <CookingTitle>Preparation</CookingTitle>
+            </CookingTitleWrapper>
+            <Preparation
+              dangerouslySetInnerHTML={{ __html: post.ingredients.preparation }}
+            />
+          </CookingWrapper>
+        </MainContent>
+      </Container>
     </Layout>
   )
 }

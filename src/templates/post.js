@@ -7,6 +7,8 @@ import {
   Title,
   Excerpt,
   StyledLink,
+  ContentWrapper,
+  MainWrapper,
 } from "../styles/PostTemplate.styles"
 
 export default function BlogPost({ data }) {
@@ -14,18 +16,20 @@ export default function BlogPost({ data }) {
   console.log(post)
   return (
     <Layout>
-      <div>
+      <MainWrapper>
         <TitleBanner>
           <Title>{post.title}</Title>
           <p>{post.date}</p>
           <p>By {post.author.node.name}</p>
         </TitleBanner>
-        <Breadcrumb>
-          <StyledLink to="/">Home</StyledLink> /{" "}
-          <StyledLink to="/blog">Blog</StyledLink> / {post.title}
-        </Breadcrumb>
-        <Excerpt dangerouslySetInnerHTML={{ __html: post.content }} />
-      </div>
+        <ContentWrapper>
+          <Breadcrumb>
+            <StyledLink to="/">Home</StyledLink> /{" "}
+            <StyledLink to="/blog">Blog</StyledLink> / {post.title}
+          </Breadcrumb>
+          <Excerpt dangerouslySetInnerHTML={{ __html: post.content }} />
+        </ContentWrapper>
+      </MainWrapper>
     </Layout>
   )
 }
