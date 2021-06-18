@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   background-color: #f5eaea;
+  min-height: 100vh;
 `
 export const ContactWrapper = styled.div`
   padding: 3rem 1rem;
@@ -76,3 +77,8 @@ export const TextArea = styled.textarea`
   width: 100%;
   margin-top: 0.4rem;
 `
+// export const TextLink = styled.a`
+//   color: #000;
+//   text-decoration: none;
+//   padding-bottom: 3rem;
+// `

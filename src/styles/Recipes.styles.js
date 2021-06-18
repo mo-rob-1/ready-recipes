@@ -27,6 +27,7 @@ export const BannerTitle = styled.h1`
 `
 export const Section = styled.section`
   padding: 2rem 1rem 0rem 1rem;
+  min-height: 100vh;
   @media (min-width: 768px) {
     padding: 3rem 4rem;
   }
@@ -39,7 +40,7 @@ export const Section = styled.section`
 `
 
 export const RecipeTitle = styled.h2`
-  font-weight: lighter;
+  font-weight: bold;
   color: #000;
   line-height: 1.5;
 `

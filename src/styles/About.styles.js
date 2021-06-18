@@ -15,6 +15,7 @@ export const IntroWrapper = styled.div`
   @media (min-width: 1440px) {
     margin: 0 auto;
     max-width: 1100px;
+    gap: 4rem;
   }
 `
 
@@ -52,6 +53,7 @@ export const AboutContent = styled.div`
   font-family: "Karla", sans-serif;
   line-height: 1.5;
   padding: 3rem 1rem;
+  min-height: 100vh;
   @media (min-width: 768px) {
     padding: 3rem 4rem;
   }
