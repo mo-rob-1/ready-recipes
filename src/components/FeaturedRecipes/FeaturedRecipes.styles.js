@@ -4,13 +4,14 @@ import Link from "gatsby-link"
 export const Section = styled.section`
   padding: 5rem 1rem;
   background-color: #f5eaea;
+  padding-bottom: 6rem;
   @media (min-width: 768px) {
     padding: 4rem 4rem;
-    padding-bottom: 0;
+    padding-bottom: 5rem;
   }
   @media (min-width: 1440px) {
     padding: 6rem 4rem;
-    padding-bottom: 3rem;
+    padding-bottom: 7rem;
   }
 `
 

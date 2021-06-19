@@ -6,8 +6,11 @@ export const Img = styled.img`
   /* margin-top: 3rem; */
 `
 export const Section = styled.section`
-  padding: 4rem;
+  padding: 5rem 1rem;
   background-color: #f5eaea;
+  @media (min-width: 768px) {
+    padding: 4rem;
+  }
   @media (min-width: 1440px) {
     padding: 6rem 4rem;
     padding-bottom: 5rem;
