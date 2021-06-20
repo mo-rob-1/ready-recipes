@@ -13,6 +13,10 @@ export const Container = styled.div`
     grid-template-rows: 1fr;
     gap: 3rem;
     padding: 4rem;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    gap: 6rem;
   }
   @media (min-width: 1440px) {
     margin: 0 auto;
@@ -24,6 +28,19 @@ export const Container = styled.div`
 export const Img = styled.img`
   width: 100%;
   margin-top: 3rem;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+`
+
+export const Title = styled.h1`
+  line-height: 1.5;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
 `
 
 export const SubTitle = styled.h5`
@@ -32,6 +49,9 @@ export const SubTitle = styled.h5`
   letter-spacing: 3px;
   margin-top: 0;
   font-weight: lighter;
+  @media (min-width: 768px) {
+    margin-bottom: 1rem;
+  }
 `
 
 export const Excerpt = styled.p`
@@ -56,7 +76,9 @@ export const StyledLink = styled(Link)`
 `
 export const TextWrapper = styled.div`
   @media (min-width: 768px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   @media (min-width: 1440px) {
     display: flex;
