@@ -15,10 +15,8 @@ import {
 
 const About = () => {
   const data = useImageQuery()
-  console.log(data)
 
   const aboutContent = useAboutContentQuery()
-  console.log(aboutContent)
 
   return (
     <Layout>
@@ -30,10 +28,12 @@ const About = () => {
           <IntroTextWrapper>
             <IntroTitle>Welcome to Ready Recipes!</IntroTitle>
             <IntroDesc>
-              Aiam quis enim lobortis scelerisque fermentum dui faucibus in
-              ornare quam viverra orci sagittis eu volutpat odio facilisis
-              mauris sit amet massa vitae tortor condimentum lacinia quis vel
-              eros donec ac odio tempor orci dapibus ultrices.
+              If you want to improve your cooking skills but don’t know where to
+              start, we’ve got plenty of dishes to choose from. Our collection
+              includes a variety of different recipes both savory and sweet. For
+              example, our mouth-watering lemon yogurt cake, classic lentil
+              soup, and flavorsome buttery tomato pasta, which are all ideal for
+              beginners.
             </IntroDesc>
           </IntroTextWrapper>
         </IntroWrapper>

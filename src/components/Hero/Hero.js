@@ -16,7 +16,6 @@ import {
 
 const Hero = () => {
   const data = useHeroQuery()
-  console.log(data)
 
   const HeroImageOne = getImage(
     data.allWpPage.edges[0].node.heroImageOne.heroImageOne.localFile

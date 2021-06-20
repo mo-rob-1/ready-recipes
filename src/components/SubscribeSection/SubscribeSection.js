@@ -9,7 +9,7 @@ import {
 
 const SubscribeSection = () => {
   const data = useSubscribeQuery()
-  console.log(data)
+
   return (
     <Section>
       <Title>{data.allWpPage.edges[0].node.subscribe.heading}</Title>

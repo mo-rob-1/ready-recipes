@@ -1,6 +1,5 @@
 import React from "react"
 import { useFeaturedRecipesQuery } from "../../hooks/useFeaturedRecipesQuery"
-import { getImage } from "gatsby-plugin-image"
 import {
   Section,
   Img,
@@ -15,7 +14,6 @@ import {
 
 const FeaturedRecipes = () => {
   const data = useFeaturedRecipesQuery()
-  console.log(data)
 
   return (
     <Section>

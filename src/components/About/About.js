@@ -13,7 +13,6 @@ import {
 
 const About = () => {
   const data = useIntroQuery()
-  console.log(data)
 
   const introImage = getImage(
     data.allWpPage.edges[0].node.introduction.introImage.localFile
