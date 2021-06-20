@@ -33,8 +33,8 @@ export default function Home({ data }) {
               <StyledLink to={node.slug}>
                 <Img src={node.featuredImage.node.localFile.url} />
                 <BlogTitle>{node.title}</BlogTitle>
-                <p>{node.date}</p>
               </StyledLink>
+              <p>{node.date}</p>
               {/* highlight-end */}
               <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               <ViewPost to={node.slug}>View Post</ViewPost>

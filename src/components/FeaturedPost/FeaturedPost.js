@@ -3,6 +3,7 @@ import { useFeaturedPostQuery } from "../../hooks/useFeaturedPostQuery"
 import {
   Section,
   Container,
+  Title,
   Excerpt,
   Img,
   SubTitle,
@@ -12,14 +13,13 @@ import {
 
 const FeaturedPost = () => {
   const data = useFeaturedPostQuery()
-  console.log(data)
 
   return (
     <Section>
       <Container>
         <TextWrapper>
           <SubTitle>Featured Post</SubTitle>
-          <h1>{data.allWpPost.edges[0].node.title}</h1>
+          <Title>{data.allWpPost.edges[0].node.title}</Title>
 
           <Excerpt
             dangerouslySetInnerHTML={{
