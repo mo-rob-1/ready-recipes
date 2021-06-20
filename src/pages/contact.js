@@ -6,7 +6,6 @@ import {
   ContactWrapper,
   Heading,
   Desc,
-  AddressWrapper,
   FormWrapper,
   NumberAndEmailWrapper,
   IconsWrapper,
@@ -16,6 +15,8 @@ import {
   FormInput,
   TextArea,
   Container,
+  SubmitBtn,
+  StyledLink,
 } from "../styles/Contact.styles"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons"
@@ -29,21 +30,17 @@ const Contact = () => {
           <ContactInfoWrapper>
             <InnerWrapper>
               <Heading>
-                If you have question or a recipe you want to share, please
-                complete the form below to send your enquiry.
+                If you have a question or a recipe you would like to share,
+                please fill the form to send your enquiry.
               </Heading>
               <Desc>
-                Please provide some information on about your recipe or question
+                Please provide some information about your recipe or question
                 and we’ll move the conversation on from there.
               </Desc>
             </InnerWrapper>
             <InnerWrapper>
-              {/* <AddressWrapper>
-              <p>123 Recipe St</p>
-              <p>Manchester, UK</p>
-            </AddressWrapper> */}
               <NumberAndEmailWrapper>
-                <p>
+                <StyledLink href="tel:0800000000">
                   {" "}
                   <FontAwesomeIcon
                     icon={faPhoneAlt}
@@ -52,8 +49,8 @@ const Contact = () => {
                     }}
                   />
                   0800 00 0000
-                </p>
-                <p>
+                </StyledLink>
+                <StyledLink href="mailto:info@readyrecipes.com">
                   {" "}
                   <FontAwesomeIcon
                     icon={faEnvelope}
@@ -62,7 +59,7 @@ const Contact = () => {
                     }}
                   />
                   info@readyrecipes.com
-                </p>
+                </StyledLink>
               </NumberAndEmailWrapper>
               <IconsWrapper>
                 <FontAwesomeIcon
@@ -86,10 +83,6 @@ const Contact = () => {
                 <Label>Name</Label>
                 <FormInput />
               </FormItemWrapper>
-              {/* <FormItemWrapper>
-              <Label>Last Name</Label>
-              <FormInput />
-            </FormItemWrapper> */}
               <FormItemWrapper>
                 <Label>Email</Label>
                 <FormInput />
@@ -102,6 +95,7 @@ const Contact = () => {
                 <Label>Message</Label>
                 <TextArea rows="12" maxlength="3000" required></TextArea>
               </FormItemWrapper>
+              <SubmitBtn type="submit">Submit</SubmitBtn>
             </Form>
           </FormWrapper>
         </ContactWrapper>

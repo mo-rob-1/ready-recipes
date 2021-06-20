@@ -3,9 +3,7 @@ import Layout from "../components/Layout/Layout"
 import { graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  TitleBanner,
   Breadcrumb,
-  Title,
   Content,
   RecipeImg,
   StyledLink,
@@ -29,13 +27,10 @@ import { faClock, faUser } from "@fortawesome/free-solid-svg-icons"
 
 export default function RecipePost({ data }) {
   const post = data.allWpRecipe.nodes[0]
-  console.log(post)
+
   return (
     <Layout>
       <Container>
-        {/* <TitleBanner>
-          <Title>{post.title}</Title>
-        </TitleBanner> */}
         <Breadcrumb>
           <StyledLink to="/">Home</StyledLink> /{" "}
           <StyledLink to="/recipes">Recipes</StyledLink> / {post.title}
