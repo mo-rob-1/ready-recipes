@@ -40,15 +40,12 @@ export const Desc = styled.div`
     width: 80%;
   }
 `
-export const AddressWrapper = styled.div`
-  font-family: "Karla", sans-serif;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-`
 export const NumberAndEmailWrapper = styled.div`
   font-family: "Karla", sans-serif;
   margin-top: 2rem;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
 `
 export const IconsWrapper = styled.div`
   margin-top: 2rem;
@@ -77,8 +74,23 @@ export const TextArea = styled.textarea`
   width: 100%;
   margin-top: 0.4rem;
 `
-// export const TextLink = styled.a`
-//   color: #000;
-//   text-decoration: none;
-//   padding-bottom: 3rem;
-// `
+export const SubmitBtn = styled.button`
+  background-color: #f5eaea;
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  border: solid 1px #000;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 2rem;
+  color: #000;
+  cursor: pointer;
+`
+export const StyledLink = styled.a`
+  font-family: "Karla", sans-serif;
+  color: #000;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`
