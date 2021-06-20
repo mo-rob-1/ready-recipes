@@ -42,7 +42,6 @@ export const BlogTitle = styled.h2`
   color: #000;
   line-height: 1.5;
 `
-
 export const Excerpt = styled.p`
   line-height: 1.6;
   font-family: "Karla", sans-serif;
@@ -61,7 +60,6 @@ export const ViewPost = styled(Link)`
   border-radius: 2rem;
   color: #000;
 `
-
 export const BlogItem = styled.div`
   margin-bottom: 3rem;
 `

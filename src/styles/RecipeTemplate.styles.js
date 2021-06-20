@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Link from "gatsby-link"
 
 export const Container = styled.main`
+  min-height: 100vh;
   @media (min-width: 768px) {
     padding: 4rem 4rem;
     padding-top: 1rem;
@@ -13,7 +14,6 @@ export const Container = styled.main`
     padding-bottom: 4rem;
   }
 `
-
 export const TitleBanner = styled.div`
   background-color: #f5eaea;
   height: 400px;
@@ -22,7 +22,6 @@ export const TitleBanner = styled.div`
   align-items: center;
   flex-direction: column;
 `
-
 export const Title = styled.h1`
   text-align: center;
   line-height: 1.5;
@@ -43,7 +42,6 @@ export const MainContent = styled.div`
     max-width: 700px;
   }
 `
-
 export const Ingredients = styled.div`
   line-height: 1.6;
   font-family: "Karla", sans-serif;
@@ -67,7 +65,7 @@ export const Breadcrumb = styled.h4`
   padding: 1rem;
   margin-bottom: 0;
   line-height: 1.5;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   @media (min-width: 768px) {
     padding-left: 0;
     padding-right: 0;
@@ -134,12 +132,14 @@ export const CookingTime = styled.p`
     margin-top: 2rem;
     margin-bottom: 0;
     margin-right: 3rem;
+    font-size: 1.1rem;
   }
 `
 export const Serves = styled.p`
   @media (min-width: 768px) {
     margin-top: 2rem;
     margin-bottom: 0;
+    font-size: 1.1rem;
   }
 `
 export const CookingWrapper = styled.div`

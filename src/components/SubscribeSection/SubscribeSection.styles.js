@@ -5,7 +5,6 @@ import img from "../../images/food-banner-homepage.jpg"
 export const Section = styled.section`
   padding-left: 1rem;
   padding-right: 1rem;
-  /* background-image: url(${img}); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,11 +18,9 @@ export const Section = styled.section`
   color: #fff;
   text-align: center;
 `
-
 export const Title = styled.h1`
   font-weight: lighter;
 `
-
 export const Description = styled.p`
   line-height: 1.6;
   font-family: "Karla", sans-serif;
@@ -36,7 +33,6 @@ export const Description = styled.p`
     max-width: 540px;
   }
 `
-
 export const SubscribeBtn = styled(Link)`
   font-family: "Karla", sans-serif;
   text-decoration: none;

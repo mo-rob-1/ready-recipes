@@ -9,7 +9,6 @@ export const TitleBanner = styled.div`
   align-items: center;
   flex-direction: column;
 `
-
 export const Title = styled.h1`
   text-align: center;
   line-height: 1.5;
@@ -17,7 +16,6 @@ export const Title = styled.h1`
 export const Excerpt = styled.div`
   line-height: 1.6;
   font-family: "Karla", sans-serif;
-  /* font-size: 0.9rem; */
   margin-bottom: 2rem;
   padding: 0rem 1rem;
 `
@@ -41,7 +39,7 @@ export const ContentWrapper = styled.div`
   }
   @media (min-width: 1440px) {
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 900px;
   }
 `
 export const MainWrapper = styled.div`

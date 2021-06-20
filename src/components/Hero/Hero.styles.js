@@ -5,17 +5,14 @@ import Link from "gatsby-link"
 export const HeroSection = styled.section`
   padding: 0;
 `
-
 export const StyledImg = styled(GatsbyImage)`
   width: 100%;
   height: 600px;
   filter: brightness(60%);
 `
-
 export const Wrapper = styled.div`
   position: relative;
 `
-
 export const HeroTextWrapper = styled.div`
   padding: 1rem;
   position: absolute;
@@ -39,7 +36,6 @@ export const HeroDescription = styled.p`
   line-height: 1.4;
   font-family: "Karla", sans-serif;
 `
-
 export const HeroTitle = styled.h1`
   line-height: 1.4;
   font-size: 2.6rem;

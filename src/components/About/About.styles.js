@@ -36,7 +36,6 @@ export const AboutDescription = styled.p`
     width: 80%;
   }
 `
-
 export const AboutLink = styled(Link)`
   font-family: "Karla", sans-serif;
   text-decoration: none;
@@ -45,7 +44,6 @@ export const AboutLink = styled(Link)`
   border-radius: 2rem;
   color: #000;
 `
-
 export const AboutTextWrapper = styled.div`
   margin-bottom: 3.2rem;
   @media (min-width: 768px) {

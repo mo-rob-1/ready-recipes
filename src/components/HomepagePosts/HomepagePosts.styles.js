@@ -3,7 +3,6 @@ import Link from "gatsby-link"
 
 export const Img = styled.img`
   width: 100%;
-  /* margin-top: 3rem; */
 `
 export const Section = styled.section`
   padding: 5rem 1rem;
@@ -16,7 +15,6 @@ export const Section = styled.section`
     padding-bottom: 5rem;
   }
 `
-
 export const Container = styled.div`
   @media (min-width: 768px) {
     display: grid;
@@ -46,19 +44,16 @@ export const SectionTitle = styled.h1`
     font-size: 2.4rem;
   }
 `
-
 export const PostTitle = styled.h2`
   line-height: 1.5;
   font-weight: bold;
 `
-
 export const Excerpt = styled.p`
   font-family: "Karla", sans-serif;
   font-size: 0.9rem;
   line-height: 1.5;
   margin-bottom: 2rem;
 `
-
 export const ViewPost = styled(Link)`
   font-family: "Karla", sans-serif;
   text-decoration: none;
@@ -68,7 +63,6 @@ export const ViewPost = styled(Link)`
   border-radius: 2rem;
   color: #000;
 `
-
 export const PostItem = styled.div`
   margin-bottom: 3rem;
 `

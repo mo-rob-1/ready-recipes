@@ -18,15 +18,12 @@ export const IntroWrapper = styled.div`
     gap: 4rem;
   }
 `
-
 export const Section = styled.section`
   background-color: #f5eaea;
 `
-
 export const IntroImgWrapper = styled.div`
   display: block;
 `
-
 export const IntroTextWrapper = styled.div`
   @media (min-width: 768px) {
     display: flex;
@@ -48,7 +45,6 @@ export const IntroDesc = styled.p`
   font-family: "Karla", sans-serif;
   line-height: 1.6;
 `
-
 export const AboutContent = styled.div`
   font-family: "Karla", sans-serif;
   line-height: 1.5;
@@ -59,7 +55,7 @@ export const AboutContent = styled.div`
   }
   @media (min-width: 1440px) {
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 900px;
     padding: 4rem 4rem;
   }
 `

@@ -21,7 +21,6 @@ export const Banner = styled.div`
   color: #fff;
   text-align: center;
 `
-
 export const BannerTitle = styled.h1`
   font-size: 3rem;
 `
@@ -38,7 +37,6 @@ export const Section = styled.section`
     padding-left: 0;
   }
 `
-
 export const RecipeTitle = styled.h2`
   font-weight: bold;
   color: #000;
@@ -49,11 +47,7 @@ export const Excerpt = styled.p`
   font-family: "Karla", sans-serif;
   font-size: 0.9rem;
   margin-bottom: 2rem;
-  /* @media (min-width: 1024px) {
-    width: 80%;
-  } */
 `
-
 export const StyledLink = styled(Link)`
   text-decoration: none;
 `
@@ -81,7 +75,6 @@ export const Breadcrumb = styled.h4`
     margin-bottom: 3rem;
   }
 `
-
 export const Wrapper = styled.div`
   @media (min-width: 768px) {
     display: grid;
