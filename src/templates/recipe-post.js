@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import { graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Head from "../components/Head/Head"
 import {
   Breadcrumb,
   Content,
@@ -30,6 +31,7 @@ export default function RecipePost({ data }) {
 
   return (
     <Layout>
+      <Head title={post.title} />
       <Container>
         <Breadcrumb>
           <StyledLink to="/">Home</StyledLink> /{" "}

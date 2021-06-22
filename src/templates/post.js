@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
 import { graphql } from "gatsby"
+import Head from "../components/Head/Head"
 import {
   TitleBanner,
   Breadcrumb,
@@ -16,6 +17,7 @@ export default function BlogPost({ data }) {
 
   return (
     <Layout>
+      <Head title={post.title} />
       <MainWrapper>
         <TitleBanner>
           <Title>{post.title}</Title>

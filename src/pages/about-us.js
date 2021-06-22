@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import { useImageQuery } from "../hooks/useImageQuery"
 import { useAboutContentQuery } from "../hooks/useAboutContentQuery"
+import Head from "../components/Head/Head"
 import Img from "gatsby-image"
 import {
   IntroWrapper,
@@ -20,6 +21,7 @@ const About = () => {
 
   return (
     <Layout>
+      <Head title="About us" />
       <Section>
         <IntroWrapper>
           <IntroImgWrapper>

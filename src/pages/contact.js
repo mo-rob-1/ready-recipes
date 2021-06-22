@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
+import Head from "../components/Head/Head"
 import {
   InnerWrapper,
   ContactInfoWrapper,
@@ -25,6 +26,7 @@ import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
 const Contact = () => {
   return (
     <Layout>
+      <Head title="Contact" />
       <Container>
         <ContactWrapper>
           <ContactInfoWrapper>

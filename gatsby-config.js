@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `http://ready-recipes.local/graphql`,
+        url: `http://evs.727.myftpupload.com/graphql`,
       },
     },
     `gatsby-plugin-styled-components`,

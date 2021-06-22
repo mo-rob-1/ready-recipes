@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
+import Head from "../components/Head/Head"
 import {
   Img,
   Banner,
@@ -19,6 +20,7 @@ import {
 export default function Home({ data }) {
   return (
     <Layout>
+      <Head title="Recipes" />
       <Banner>
         <BannerTitle>Recipes</BannerTitle>
       </Banner>
