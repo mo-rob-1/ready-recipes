@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import img from "../images/Blog-page-banner-image.jpg"
+import img from "../images/blog-page-banner-image.jpg"
 import Link from "gatsby-link"
 
 export const Section = styled.section`
