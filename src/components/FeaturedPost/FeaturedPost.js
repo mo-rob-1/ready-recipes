@@ -21,11 +21,9 @@ const FeaturedPost = () => {
           <SubTitle>Featured Post</SubTitle>
           <Title>{data.allWpPost.edges[0].node.title}</Title>
 
-          <Excerpt
-            dangerouslySetInnerHTML={{
-              __html: data.allWpPost.edges[0].node.excerpt,
-            }}
-          />
+          <Excerpt>
+            {data.allWpPost.edges[0].node.blogpostExcerpt.excerpt}
+          </Excerpt>
           <div>
             <StyledLink to={`/blog${data.allWpPost.edges[0].node.uri}`}>
               Read More

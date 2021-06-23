@@ -10,6 +10,9 @@ export const useFeaturedPostQuery = () => {
             excerpt
             uri
             slug
+            blogpostExcerpt {
+              excerpt
+            }
             featuredImage {
               node {
                 localFile {

@@ -25,11 +25,7 @@ const FeaturedRecipes = () => {
               <StyledLink to={node.uri} key={node.uri}>
                 <Img src={node.featuredImage.node.localFile.url} />
                 <RecipeTitle>{node.title}</RecipeTitle>
-                <Excerpt
-                  dangerouslySetInnerHTML={{
-                    __html: node.excerpt,
-                  }}
-                />
+                <Excerpt>{node.recipeExcerpt.excerpt}</Excerpt>
                 <ViewRecipe to={node.uri}>View Recipe</ViewRecipe>
               </StyledLink>
             </RecipeItem>

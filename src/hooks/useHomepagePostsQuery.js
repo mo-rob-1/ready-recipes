@@ -7,6 +7,9 @@ export const useHomepagePostsQuery = () => {
         nodes {
           title
           excerpt
+          blogpostExcerpt {
+            excerpt
+          }
           uri
           slug
           date(formatString: "DD MMMM, YYYY")

@@ -7,6 +7,9 @@ export const useFeaturedRecipesQuery = () => {
         nodes {
           title
           excerpt
+          recipeExcerpt {
+            excerpt
+          }
           slug
           uri
           featuredImage {

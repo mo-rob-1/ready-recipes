@@ -26,11 +26,7 @@ const HomepagePosts = () => {
                 <Img src={node.featuredImage.node.localFile.url} />
                 <PostTitle>{node.title}</PostTitle>
                 <p>{node.date}</p>
-                <Excerpt
-                  dangerouslySetInnerHTML={{
-                    __html: node.excerpt,
-                  }}
-                />
+                <Excerpt>{node.blogpostExcerpt.excerpt}</Excerpt>
                 <ViewPost to={`/blog${node.uri}`}>View Post</ViewPost>
               </StyledLink>
             </PostItem>
