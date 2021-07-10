@@ -23,7 +23,10 @@ const HomepagePosts = () => {
           return (
             <PostItem>
               <StyledLink to={`/blog${node.uri}`} key={node.uri}>
-                <Img src={node.featuredImage.node.localFile.url} />
+                <Img
+                  src={node.featuredImage.node.localFile.url}
+                  alt={node.title}
+                />
                 <PostTitle>{node.title}</PostTitle>
                 <p>{node.date}</p>
                 <Excerpt>{node.blogpostExcerpt.excerpt}</Excerpt>
