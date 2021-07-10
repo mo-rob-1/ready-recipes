@@ -23,7 +23,10 @@ const FeaturedRecipes = () => {
           return (
             <RecipeItem>
               <StyledLink to={node.uri} key={node.uri}>
-                <Img src={node.featuredImage.node.localFile.url} />
+                <Img
+                  src={node.featuredImage.node.localFile.url}
+                  alt={node.title}
+                />
                 <RecipeTitle>{node.title}</RecipeTitle>
                 <Excerpt>{node.recipeExcerpt.excerpt}</Excerpt>
                 <ViewRecipe to={node.uri}>View Recipe</ViewRecipe>

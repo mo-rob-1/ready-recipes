@@ -8,10 +8,10 @@ export const Wrapper = styled.footer`
 export const Text = styled.small`
   font-family: "Karla", sans-serif;
   line-height: 1.5;
-  color: #8f8f8f;
+  color: #222;
 `
 
 export const StyledLink = styled(Link)`
   text-decoration: underline;
-  color: #8f8f8f;
+  color: #222;
 `
