@@ -21,7 +21,7 @@ export const ListItem = styled.li`
   margin-right: 1.2rem;
   margin-top: 0.3rem;
   margin-bottom: 1rem;
-  &:nth-child(4) {
+  &:nth-child(5) {
     margin-right: 0;
   }
   @media (min-width: 768px) {
