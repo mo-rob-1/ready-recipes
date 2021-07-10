@@ -33,7 +33,10 @@ export default function Home({ data }) {
             <BlogItem key={node.slug}>
               {/* highlight-start */}
               <StyledLink to={node.slug}>
-                <Img src={node.featuredImage.node.localFile.url} />
+                <Img
+                  src={node.featuredImage.node.localFile.url}
+                  alt={node.title}
+                />
                 <BlogTitle>{node.title}</BlogTitle>
               </StyledLink>
               <p>{node.date}</p>

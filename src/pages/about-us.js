@@ -25,7 +25,10 @@ const About = () => {
       <Section>
         <IntroWrapper>
           <IntroImgWrapper>
-            <Img fluid={data.aboutusImage.childImageSharp.fluid} />
+            <Img
+              fluid={data.aboutusImage.childImageSharp.fluid}
+              alt="About Image"
+            />
           </IntroImgWrapper>
           <IntroTextWrapper>
             <IntroTitle>Welcome to Ready Recipes!</IntroTitle>
