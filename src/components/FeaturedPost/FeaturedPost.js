@@ -32,6 +32,7 @@ const FeaturedPost = () => {
         </TextWrapper>
         <Img
           src={data.allWpPost.edges[0].node.featuredImage.node.localFile.url}
+          alt={data.allWpPost.edges[0].node.title}
         />
       </Container>
     </Section>
