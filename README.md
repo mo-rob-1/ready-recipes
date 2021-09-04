@@ -1,105 +1,39 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Ready Recipes: How I Built the Site
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+The purpose of this project was to create a headless WordPress site using GatsbyJS. What makes this site unique is that WordPress is only used for the backend and Gatsby is used for the frontend. WordPress is a content management and GatsbyJS is a React-based framework and a static site generator. WordPress is the perfect tool for storing the site's data and Gatsby is perfect for delivering a fast and high-performing site.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## Research
 
-## 🚀 Quick start
+I had no prior experience in building a headless WordPress site with GatsbyJS. The main reason why this appealed to me and pushed me to create this project is that it gave me the opportunity to learn a new skill so I can share with you what I have learnt whilst building the site in this write-up. I also noticed that other developers were starting to use a headless CMS to develop sites and apps. I therefore spent a lot of time finding and absorbing new learning materials I found online to help me create this project.
 
-1.  **Create a Gatsby site.**
+I wanted to create a site where approved users can log in to the WordPress backend and add their own content. This led me to the idea of creating a recipes site. Recipes sites are usually simple whilst being very informative and I wanted to achieve this in this project.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+## Design
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+As this was a food recipes site, I wanted the site to resemble the aesthetics of a cookbook. I created a moodboard on Pinterest where I found and added inspirations from other recipes sites, cookbooks, cooking magazines etc. I took into consideration the fonts used, colours and imagery. The way the site currently looks was inspired by the design phase.
 
-1.  **Start developing.**
+## Develop
 
-    Navigate into your new site’s directory and start it up.
+I took onboard the information and notes I gathered from the research and design phase and begun to develop the site.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+Firstly, I created an empty repo on GitHub where all the code will be stored. I also installed a fresh copy of WordPress. I then went into VSCode, opened up the terminal and installed a new GatsbyJS project which gave me the boilerplate code to begin developing the site.
 
-1.  **Open the source code and start editing!**
+To connect WordPress to Gatsby all I had to do was add the WordPress GraphQL URL to the gatsby-config.js file. I then stopped and restarted the terminal in order for this to work.
 
-    Your site is now running at `http://localhost:8000`!
+Within the source folder, I created a 'components' folder. This is where each section of the site lives, e.g. Header, Footer, Carousel, Navigation etc. I also created a 'pages' folder for the following pages; index, about us, recipes, blog, contact and the 404 page.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+In order to get the data stored in WordPress and display it in the browser, I used GraphQL which is a query language for APIs. For example, I created the navigation menu in WordPress and then used GraphQL to query the menu data which would then return the data in a JSON format ready to be used and displayed in the browser using React. I created a custom hook file where I stored the returned JSON data from GraphQL. I could then import the custom hook into any of the components or pages. In this case, I imported the custom hook into the navigation component in order to display the site's menu. I repeated this process for other data stored within WordPress such as the posts, images and the data from the recipes custom post type. I created a 'hooks' folder to store all of my custom hooks. Doing this kept my code clean and organised.
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+I used Styled Components which is a React library to style the components and pages. This library help keep the concerns of styling and element architecture separated and make components more readable. Using Styled Components kept my code organised as I developed a component in one file and styled the component in another file within the same component folder. To style the pages I used a similar method but this time I created a 'styles' which would house all the stylings for each page.
 
-## 🚀 Quick start (Gatsby Cloud)
+To customise the WordPress edit screen and tailor the content editing experience I used the Advanced Custom Fields plugin. For example, I create several fields for the recipes custom post type. Whenever the user goes to create a new recipe they can add a recipe overview, an image of the food, cooking time, number of serves, preparation information and the ingredients. These fields were created using the ACF plugin and GraphQL to query the data from the plugin.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+## Deploy
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
+I used Gatsby Cloud to host the Gatsby files. This is where I linked the Ready Recipes repository from GitHub to Gatsby Cloud. I also used webhooks for automatic builds whenever a change has been made to the code. I also bought a WordPress hosting plan to deploy the WordPress backend which stores all of the data for the site.
 
-## 🧐 What's inside?
+Once I deployed the site I ran a performance check on the site using Lighthouse. The site scored high in performance, accessibility, best practices and SEO.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+## Wrapping up
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+As a front-end developer, I am always finding new ways to challenge myself and develop my skillset. I learnt a lot about using WordPress as a headless CMS with GatsbyJS to build this site. I was pleased to develop a fast, accessible and overall a high performing site whilst using a CMS as a data source. Using a headless CMS to build sites and applications is a topic which I will definitely explore more as I continue my journey in the big world of web development.
