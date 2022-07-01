@@ -65,7 +65,7 @@ export const FormItemWrapper = styled.div`
 `
 export const Label = styled.label`
   font-family: "Karla", sans-serif;
-  color: "#000";
+  color: "#000 !important;";
 `
 export const FormInput = styled.input`
   width: 100%;
