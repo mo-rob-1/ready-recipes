@@ -1,4 +1,4 @@
-# Ready Recipes: How I Built the Site
+# Ready Recipes: How I Built The Site
 
 The purpose of this project was to create a headless WordPress site using GatsbyJS. What makes this site unique is that WordPress is only used for the backend and Gatsby is used for the frontend. WordPress is a content management and GatsbyJS is a React-based framework and a static site generator. WordPress is the perfect tool for storing the site's data and Gatsby is perfect for delivering a fast and high-performing site.
 
