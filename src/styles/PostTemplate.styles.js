@@ -43,5 +43,6 @@ export const ContentWrapper = styled.div`
   }
 `
 export const MainWrapper = styled.div`
+  color: #000;
   min-height: 100vh;
 `
