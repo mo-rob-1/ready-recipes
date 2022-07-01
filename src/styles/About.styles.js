@@ -47,6 +47,7 @@ export const IntroDesc = styled.p`
   line-height: 1.6;
 `
 export const AboutContent = styled.div`
+  color: #000;
   font-family: "Karla", sans-serif;
   line-height: 1.5;
   padding: 3rem 1rem;
