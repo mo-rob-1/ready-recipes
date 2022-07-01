@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const IntroWrapper = styled.div`
   padding: 3rem 1rem;
+  color: #000;
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

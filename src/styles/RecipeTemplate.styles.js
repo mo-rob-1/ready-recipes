@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Link from "gatsby-link"
 
 export const Container = styled.main`
+  color: #000;
   min-height: 100vh;
   @media (min-width: 768px) {
     padding: 4rem 4rem;

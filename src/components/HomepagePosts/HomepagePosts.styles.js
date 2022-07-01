@@ -5,6 +5,7 @@ export const Img = styled.img`
   width: 100%;
 `
 export const Section = styled.section`
+  color: #000;
   padding: 5rem 1rem;
   background-color: #f5eaea;
   @media (min-width: 768px) {

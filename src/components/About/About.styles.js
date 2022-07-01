@@ -3,6 +3,7 @@ import Link from "gatsby-link"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const AboutSection = styled.section`
+  color: #000;
   text-align: center;
   padding: 1rem;
   @media (min-width: 768px) {

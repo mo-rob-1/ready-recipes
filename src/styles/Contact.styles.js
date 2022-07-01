@@ -23,6 +23,7 @@ export const ContactWrapper = styled.div`
 `
 export const ContactInfoWrapper = styled.div`
   display: block;
+  color: #000;
 `
 export const InnerWrapper = styled.div`
   display: block;
@@ -63,6 +64,7 @@ export const FormItemWrapper = styled.div`
 `
 export const Label = styled.label`
   font-family: "Karla", sans-serif;
+  color: "#000";
 `
 export const FormInput = styled.input`
   width: 100%;

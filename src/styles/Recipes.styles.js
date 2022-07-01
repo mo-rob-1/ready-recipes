@@ -25,6 +25,7 @@ export const BannerTitle = styled.h1`
   font-size: 3rem;
 `
 export const Section = styled.section`
+  color: #000;
   padding: 2rem 1rem 0rem 1rem;
   min-height: 100vh;
   @media (min-width: 768px) {

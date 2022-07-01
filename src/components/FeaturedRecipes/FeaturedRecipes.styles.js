@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Link from "gatsby-link"
 
 export const Section = styled.section`
+  color: #000;
   padding: 5rem 1rem;
   background-color: #f5eaea;
   padding-bottom: 6rem;
@@ -19,6 +20,7 @@ export const Img = styled.img`
   width: 100%;
 `
 export const Title = styled.h1`
+  color: #000;
   text-align: center;
   margin-top: 0;
   margin-bottom: 2rem;

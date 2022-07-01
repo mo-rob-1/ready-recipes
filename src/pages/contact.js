@@ -70,11 +70,16 @@ const Contact = () => {
                     fontSize: "1.8rem",
                     marginRight: "18px",
                     cursor: "pointer",
+                    color: "#000",
                   }}
                 />
                 <FontAwesomeIcon
                   icon={faTwitter}
-                  style={{ fontSize: "1.8rem", cursor: "pointer" }}
+                  style={{
+                    fontSize: "1.8rem",
+                    cursor: "pointer",
+                    color: "#000",
+                  }}
                 />
               </IconsWrapper>
             </InnerWrapper>
