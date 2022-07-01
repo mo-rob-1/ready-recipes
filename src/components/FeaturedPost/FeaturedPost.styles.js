@@ -6,7 +6,7 @@ export const Section = styled.section`
 `
 
 export const Container = styled.div`
-  color: "#000 !important";
+  color: #000;
   padding: 5rem 1rem;
   @media (min-width: 768px) {
     display: grid;
