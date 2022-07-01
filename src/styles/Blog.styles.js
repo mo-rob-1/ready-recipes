@@ -62,12 +62,14 @@ export const ViewPost = styled(Link)`
 `
 export const BlogItem = styled.div`
   margin-bottom: 3rem;
+  color: #000;
 `
 export const BreadcrumbLink = styled(Link)`
   font-family: "Karla", sans-serif;
   color: #000;
 `
 export const Breadcrumb = styled.h4`
+  color: "#000";
   font-family: "Karla", sans-serif;
   line-height: 1.5;
   margin-bottom: 2rem;

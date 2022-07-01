@@ -28,6 +28,11 @@ export const AboutTitle = styled.h1`
     width: 80%;
   }
 `
+
+export const AboutContent = styled.div`
+  color: #000;
+`
+
 export const AboutDescription = styled.p`
   font-family: "Karla", sans-serif;
   line-height: 1.5;

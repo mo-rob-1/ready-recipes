@@ -59,12 +59,12 @@ export const Form = styled.form`
   display: block;
 `
 export const FormItemWrapper = styled.div`
+  color: "#000";
   display: block;
   margin-bottom: 1.8rem;
 `
 export const Label = styled.label`
   font-family: "Karla", sans-serif;
-  color: "#000";
 `
 export const FormInput = styled.input`
   width: 100%;
